@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-8=*3^ye-lead8&jq-e$6s5-7ht_&d4(w_zt8*qbalqf-00&v^q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*','themilkstore.azurewebsites.net']
 
 
 # Application definition
