@@ -53,6 +53,8 @@ MIDDLEWARE = [
 
 CSRF_COOKIE_SECURE = True  # If using HTTPS
 SESSION_COOKIE_SECURE = True  # If using HTTPS
+CSRF_TRUSTED_ORIGINS = ['themilkstore.azurewebsites.net']
+
 
 ROOT_URLCONF = 'milkecom.urls'
 
