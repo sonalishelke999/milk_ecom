@@ -1,7 +1,7 @@
 {% extends "homepage.html" %}
     
 {% block content %} 
-
+{% load static %}
 <!-- Hero Section -->
 <div class="hero mt-4">
     <div class="hero-content">
@@ -12,6 +12,24 @@
 </div>
 
 <style>
+    .quantity {
+    font-weight: bold;
+    color: #007bff; /* Blue color */
+    margin: 0; /* Remove margin */
+}
+
+.price {
+    font-weight: bold;
+    color: #28a745; /* Green color */
+    margin: 0; /* Remove margin */
+}
+
+    .product-image {
+        width: 100%; /* Makes the image fill the card */
+        height: 250px; /* Fixed height for uniformity */
+        object-fit: contain; 
+        
+    }
     .hero {
         background: linear-gradient(rgba(152, 251, 152, 0.8), rgba(255, 255, 255, 0.8)), url('your-hero-image-url.jpg') no-repeat center center; 
         background-size: cover; /* Use an attractive background image */
@@ -50,6 +68,71 @@
     }
 </style>
 
+    <!-- Products Section -->
+    <section class="products py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center">Our Products</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="{% static 'images/milk-product.png' %}" class="card-img-top product-image" alt="Fresh Milk">
+                        <div class="card-body">
+                            <h5 class="card-title">Fresh Milk</h5>
+                            <p class="card-text">Pure and fresh milk delivered straight from the farm.</p>
+                            <div class="card-footer d-flex justify-content-between align-items-center">
+                                <span class="quantity">250 ml</span>
+                                <span class="price text-success">Rs 25</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="{% static 'images/cream-product.png' %}" class="card-img-top product-image" alt="Cream">
+                        <div class="card-body">
+                            <h5 class="card-title">Cream</h5>
+                            <p class="card-text">Rich and creamy, perfect for cooking and desserts.</p>
+                            <div class="card-footer d-flex justify-content-between align-items-center">
+                                <span class="quantity">250 gm</span>
+                                <span class="price text-success">Rs 100</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="{% static 'images/yogurt-product.png' %}" class="card-img-top product-image" alt="Yogurt">
+                        <div class="card-body">
+                            <h5 class="card-title">Yogurt</h5>
+                            <p class="card-text">Delicious yogurt made from our fresh milk.</p>
+                            <div class="card-footer d-flex justify-content-between align-items-center">
+                                <span class="quantity">250 gm</span>
+                                <span class="price text-success">Rs 30</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="{% static 'images/butter-product.png' %}" class="card-img-top product-image" alt="Butter">
+                        <div class="card-body">
+                            <h5 class="card-title">Butter</h5>
+                            <p class="card-text">Creamy and fresh butter for all your cooking needs.</p>
+                            <div class="card-footer d-flex justify-content-between align-items-center">
+                                <span class="quantity">250 gm</span>
+                                <span class="price text-success">Rs 50</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- Services Section -->
     <section class="services py-5">
@@ -58,7 +141,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="static/images/home-delivery.jpg" class="card-img-top" alt="Home Delivery">
+                        <img src="{% static 'images/homedelivery.png' %}" class="card-img-top product-image" alt="Home Delivery">
                         <div class="card-body">
                             <h5 class="card-title">Home Delivery</h5>
                             <p class="card-text">Get fresh milk delivered directly to your home at your preferred time.</p>
@@ -67,7 +150,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="static/images/subscription-plans.jpg" class="card-img-top" alt="Subscription Plans">
+                        <img src="{% static 'images/subscribe.png' %}" class="card-img-top product-image" alt="Subscription Plans">
                         <div class="card-body">
                             <h5 class="card-title">Flexible Subscription Plans</h5>
                             <p class="card-text">Choose a plan that fits your needs and enjoy regular deliveries.</p>
@@ -76,55 +159,10 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="static/images/customer-support.jpg" class="card-img-top" alt="Customer Support">
+                        <img src="{% static 'images/customersupport.png' %}" class="card-img-top product-image" alt="Customer Support">
                         <div class="card-body">
                             <h5 class="card-title">Customer Support</h5>
                             <p class="card-text">Our team is here to help you with any inquiries or issues.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Products Section -->
-    <section class="products py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center">Our Products</h2>
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="card">
-                        <img src="static/images/fresh-milk.jpg" class="card-img-top" alt="Fresh Milk">
-                        <div class="card-body">
-                            <h5 class="card-title">Fresh Milk</h5>
-                            <p class="card-text">Pure and fresh milk delivered straight from the farm.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card">
-                        <img src="static/images/cream.jpg" class="card-img-top" alt="Cream">
-                        <div class="card-body">
-                            <h5 class="card-title">Cream</h5>
-                            <p class="card-text">Rich and creamy, perfect for cooking and desserts.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card">
-                        <img src="static/images/yogurt.jpg" class="card-img-top" alt="Yogurt">
-                        <div class="card-body">
-                            <h5 class="card-title">Yogurt</h5>
-                            <p class="card-text">Delicious yogurt made from our fresh milk.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card">
-                        <img src="static/images/butter.jpg" class="card-img-top" alt="Butter">
-                        <div class="card-body">
-                            <h5 class="card-title">Butter</h5>
-                            <p class="card-text">Creamy and fresh butter for all your cooking needs.</p>
                         </div>
                     </div>
                 </div>
