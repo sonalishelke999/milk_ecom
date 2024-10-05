@@ -51,6 +51,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+CSRF_COOKIE_SECURE = True  # If using HTTPS
+SESSION_COOKIE_SECURE = True  # If using HTTPS
+
 ROOT_URLCONF = 'milkecom.urls'
 
 TEMPLATES = [
