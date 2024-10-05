@@ -1,0 +1,146 @@
+{% extends "homepage.html" %}
+    
+{% block content %} 
+
+<!-- Hero Section -->
+<div class="hero mt-4">
+    <div class="hero-content">
+        <h1>Fresh Milk Delivered to Your Doorstep</h1>
+        <p>Enjoy the taste of freshness from local farms to your home.</p>
+        <a href="#" class="btn btn-primary">Shop Now</a>
+    </div>
+</div>
+
+<style>
+    .hero {
+        background: linear-gradient(rgba(152, 251, 152, 0.8), rgba(255, 255, 255, 0.8)), url('your-hero-image-url.jpg') no-repeat center center; 
+        background-size: cover; /* Use an attractive background image */
+        height: 400px; /* Slightly increased height for impact */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #333; /* Darker text for better readability */
+        text-align: center;
+        padding: 20px;
+        border-radius: 8px; /* Rounded corners for a softer look */
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    }
+    .hero-content {
+        max-width: 600px; /* Limit content width */
+    }
+    .hero h1 {
+        font-size: 2.8rem; /* Larger font size for emphasis */
+        margin-bottom: 10px;
+        font-weight: bold; /* Bold for more impact */
+    }
+    .hero p {
+        font-size: 1.2rem; /* Slightly larger for better visibility */
+        margin-bottom: 20px;
+    }
+    .hero .btn {
+        background-color: #007bff; /* Blue button */
+        color: white; /* White button text */
+        padding: 10px 20px; /* Added padding for a better click area */
+        font-size: 1rem; /* Consistent font size */
+        border-radius: 5px; /* Rounded button corners */
+        transition: background-color 0.3s; /* Smooth transition */
+    }
+    .hero .btn:hover {
+        background-color: #0056b3; /* Darker blue on hover */
+    }
+</style>
+
+
+    <!-- Services Section -->
+    <section class="services py-5">
+        <div class="container">
+            <h2 class="text-center">Our Services</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="static/images/home-delivery.jpg" class="card-img-top" alt="Home Delivery">
+                        <div class="card-body">
+                            <h5 class="card-title">Home Delivery</h5>
+                            <p class="card-text">Get fresh milk delivered directly to your home at your preferred time.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="static/images/subscription-plans.jpg" class="card-img-top" alt="Subscription Plans">
+                        <div class="card-body">
+                            <h5 class="card-title">Flexible Subscription Plans</h5>
+                            <p class="card-text">Choose a plan that fits your needs and enjoy regular deliveries.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="static/images/customer-support.jpg" class="card-img-top" alt="Customer Support">
+                        <div class="card-body">
+                            <h5 class="card-title">Customer Support</h5>
+                            <p class="card-text">Our team is here to help you with any inquiries or issues.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center">Our Products</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="static/images/fresh-milk.jpg" class="card-img-top" alt="Fresh Milk">
+                        <div class="card-body">
+                            <h5 class="card-title">Fresh Milk</h5>
+                            <p class="card-text">Pure and fresh milk delivered straight from the farm.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="static/images/cream.jpg" class="card-img-top" alt="Cream">
+                        <div class="card-body">
+                            <h5 class="card-title">Cream</h5>
+                            <p class="card-text">Rich and creamy, perfect for cooking and desserts.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="static/images/yogurt.jpg" class="card-img-top" alt="Yogurt">
+                        <div class="card-body">
+                            <h5 class="card-title">Yogurt</h5>
+                            <p class="card-text">Delicious yogurt made from our fresh milk.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="static/images/butter.jpg" class="card-img-top" alt="Butter">
+                        <div class="card-body">
+                            <h5 class="card-title">Butter</h5>
+                            <p class="card-text">Creamy and fresh butter for all your cooking needs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Call to Action Section -->
+    <section class="call-to-action py-5 bg-light text-center">
+        <div class="container">
+            <h2>Ready to Experience Fresh Milk?</h2>
+            <p>Sign up for our subscription service today!</p>
+            <a href="subscription" class="btn btn-primary btn-lg">Subscribe Now</a>
+        </div>
+    </section>
+
+    {% endblock %}  
+

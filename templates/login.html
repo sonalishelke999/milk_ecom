@@ -1,0 +1,16 @@
+{% extends "homepage.html" %}
+    
+{% block content %} 
+  
+  <body>
+    <div class="form-container">
+      <h2 class="text-center">Login</h2>
+      <form  method="post" action="">
+        {% csrf_token %}
+        <input type="email" class="form-control mb-3" placeholder="Email" required name="email">
+        <input type="password" class="form-control mb-4" placeholder="Password" required name="password">
+        <button type="submit" class="btn btn-primary btn-block">Login</button>
+      </form>
+    </div>
+
+    {% endblock %}  
