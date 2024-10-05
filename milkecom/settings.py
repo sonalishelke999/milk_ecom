@@ -77,11 +77,18 @@ WSGI_APPLICATION = 'milkecom.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
+        # 'NAME': 'milk_ecom',
+        # 'HOST':'127.0.0.1',
+        # 'USER':'root',
+        # 'PASSWORD':'root@123',
+        # 'PORT':'3306'
+
+        'HOST':'themilkstore-server.mysql.database.azure.com',
+        'PORT':'3306',
+        'USER':'rprjwiimyo',
         'NAME': 'milk_ecom',
-        'HOST':'127.0.0.1',
-        'USER':'root',
-        'PASSWORD':'root@123',
-        'PORT':'3306'
+        'PASSWORD':'admin@123'
+
     }
 }
 
